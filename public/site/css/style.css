@@ -107,9 +107,9 @@ body
 .box_product
 {
 	padding: 15px;
-	border-top: 4px solid #d9534f;
-	/*border: 1px solid #d9534f;*/
-	height: 432px;
+	/*border-top: 4px solid #d9534f;*/
+	border: 1px solid #d9534f;
+	/*height: 432px;*/
 	overflow: auto;
 }
 .box_product a
@@ -280,3 +280,25 @@ iframe
 	font-weight: bolder;
 	font-size: 20px;
 }
+@media (max-width: 767px) 
+{ 
+	.box_product
+	{
+		height: 365px;
+	}
+}
+/*@media (min-width: 767px) and (max-width: 991px)
+{
+	.box_product
+	{
+		
+	}
+}
+@media (min-width: 992px) and (max-width: 1199px)
+{
+
+}
+@media (min-width: 1200px)
+{
+
+}*/

@@ -63,7 +63,7 @@
 <div class="list_product">
     <div class="container">
         <div class="title">
-            <a class="btn btn-danger" href="list_product.html">SẢN PHẨM HOT<span class="glyphicon glyphicon-menu-right" aria-hidden="true" style="float: right;"></span></a>
+            <a class="btn btn-danger" href="list_product.html">ĐIỆN THOẠI NỔI BẬT<span class="glyphicon glyphicon-menu-right" aria-hidden="true" style="float: right;"></span></a>
         </div>
         <?php foreach ($product_hot as $row) {?>
             <div class="col-xs-6 col-sm-6 col-md-3 box_product">
@@ -133,9 +133,147 @@
 <div class="list_product">
     <div class="container">
         <div class="title">
-            <a class="btn btn-danger" href="list_product.html">SẢN PHẨM MUA NHIỀU<span class="glyphicon glyphicon-menu-right" aria-hidden="true" style="float: right;"></span></a>
+            <a class="btn btn-danger" href="list_product.html">ĐIỆN THOẠI MUA NHIỀU<span class="glyphicon glyphicon-menu-right" aria-hidden="true" style="float: right;"></span></a>
         </div>
         <?php foreach ($product_buy as $row) {?>
+            <div class="col-xs-6 col-sm-6 col-md-3 box_product">
+                <a href="<?php echo base_url('product/view/'.$row->id) ?>" class="thumbnail"><img src="<?php echo base_url('/upload/product/'.$row->image) ?>" alt="<?php echo $row->name ?>"></a>
+                <center class="price_product">
+                    <h4><b><a href="<?php echo base_url('product/view/'.$row->id) ?>"><?php echo $row->name ?></a></b></h4>
+                    <?php 
+                    if($row->discount > 0) 
+                    {
+                        $price_new = $row->price - ($row->price * ($row->discount / 100));
+                    ?>
+                    <del><?php echo number_format($row->price) ?> đ</del>
+                    <span><?php echo number_format($price_new) ?> đ</span>
+                    <?php
+                    }
+                    else
+                    {
+                    ?>
+                    <span><?php echo number_format($row->price) ?> đ</span>
+                    <?php 
+                    }
+                    ?>
+                    <?php if($row->status == 1){ ?>
+                    <a type="button" class="btn btn-success btn-lg btn-block" style="margin-top: 15px">Còn hàng</a>
+                    <?php }else{ ?>
+                    <a type="button" class="btn btn-danger btn-lg btn-block" style="margin-top: 15px">Hết hàng</a>
+                    <?php } ?>
+                </center>  
+                <div class="info_product">
+                    <center>
+                        <center class="price_product_hover">
+                            <a href="<?php echo base_url('product/view/'.$row->id) ?>" class="btn btn-warning btn-lg btn-block">Xem chi tiết</a>
+                        </a>
+                            <h4><b><a href="<?php echo base_url('product/view/'.$row->id) ?>"><?php echo $row->name ?></a></b></h4>
+                            <?php 
+                            if($row->discount > 0) 
+                            {
+                                $price_new = $row->price - ($row->price * ($row->discount / 100));
+                            ?>
+                            <del><?php echo number_format($row->price) ?> đ</del>
+                            <span><?php echo number_format($price_new) ?> đ</span>
+                            <?php
+                            }
+                            else
+                            {
+                            ?>
+                            <span><?php echo number_format($row->price) ?> đ</span>
+                            <?php 
+                            }
+                            ?>
+                            <br><br>
+                        </center>
+                        <a href="<?php echo base_url('product/view/'.$row->id) ?>">
+                            <p>Màu sắc: <?php echo $row->color ?></p>
+                            <p>Bảo hành: <?php echo $row->warranty ?></p>
+                            <p style="display: inline-block;">Khuyến mại: </p>
+                            <p><?php echo $row->gifts ?></p>
+                        </a>
+                    </center>
+                </div>
+            </div>
+        <?php } ?>    
+    </div>
+</div>
+
+<div class="list_product">
+    <div class="container">
+        <div class="title">
+            <a class="btn btn-danger" href="list_product.html">ĐIỆN THOẠI GIẢM GIÁ<span class="glyphicon glyphicon-menu-right" aria-hidden="true" style="float: right;"></span></a>
+        </div>
+        <?php foreach ($product_sale as $row) {?>
+            <div class="col-xs-6 col-sm-6 col-md-3 box_product">
+                <a href="<?php echo base_url('product/view/'.$row->id) ?>" class="thumbnail"><img src="<?php echo base_url('/upload/product/'.$row->image) ?>" alt="<?php echo $row->name ?>"></a>
+                <center class="price_product">
+                    <h4><b><a href="<?php echo base_url('product/view/'.$row->id) ?>"><?php echo $row->name ?></a></b></h4>
+                    <?php 
+                    if($row->discount > 0) 
+                    {
+                        $price_new = $row->price - ($row->price * ($row->discount / 100));
+                    ?>
+                    <del><?php echo number_format($row->price) ?> đ</del>
+                    <span><?php echo number_format($price_new) ?> đ</span>
+                    <?php
+                    }
+                    else
+                    {
+                    ?>
+                    <span><?php echo number_format($row->price) ?> đ</span>
+                    <?php 
+                    }
+                    ?>
+                    <?php if($row->status == 1){ ?>
+                    <a type="button" class="btn btn-success btn-lg btn-block" style="margin-top: 15px">Còn hàng</a>
+                    <?php }else{ ?>
+                    <a type="button" class="btn btn-danger btn-lg btn-block" style="margin-top: 15px">Hết hàng</a>
+                    <?php } ?>
+                </center>  
+                <div class="info_product">
+                    <center>
+                        <center class="price_product_hover">
+                            <a href="<?php echo base_url('product/view/'.$row->id) ?>" class="btn btn-warning btn-lg btn-block">Xem chi tiết</a>
+                        </a>
+                            <h4><b><a href="<?php echo base_url('product/view/'.$row->id) ?>"><?php echo $row->name ?></a></b></h4>
+                            <?php 
+                            if($row->discount > 0) 
+                            {
+                                $price_new = $row->price - ($row->price * ($row->discount / 100));
+                            ?>
+                            <del><?php echo number_format($row->price) ?> đ</del>
+                            <span><?php echo number_format($price_new) ?> đ</span>
+                            <?php
+                            }
+                            else
+                            {
+                            ?>
+                            <span><?php echo number_format($row->price) ?> đ</span>
+                            <?php 
+                            }
+                            ?>
+                            <br><br>
+                        </center>
+                        <a href="<?php echo base_url('product/view/'.$row->id) ?>">
+                            <p>Màu sắc: <?php echo $row->color ?></p>
+                            <p>Bảo hành: <?php echo $row->warranty ?></p>
+                            <p style="display: inline-block;">Khuyến mại: </p>
+                            <p><?php echo $row->gifts ?></p>
+                        </a>
+                    </center>
+                </div>
+            </div>
+        <?php } ?>    
+    </div>
+</div>
+
+<div class="list_product">
+    <div class="container">
+        <div class="title">
+            <a class="btn btn-danger" href="list_product.html">PHỤ KIỆN NỔI BẬT<span class="glyphicon glyphicon-menu-right" aria-hidden="true" style="float: right;"></span></a>
+        </div>
+        <?php foreach ($product_accessories_hot as $row) {?>
             <div class="col-xs-6 col-sm-6 col-md-3 box_product">
                 <a href="<?php echo base_url('product/view/'.$row->id) ?>" class="thumbnail"><img src="<?php echo base_url('/upload/product/'.$row->image) ?>" alt="<?php echo $row->name ?>"></a>
                 <center class="price_product">
