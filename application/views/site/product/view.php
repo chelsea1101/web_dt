@@ -59,7 +59,7 @@
             <div class="col-xs-12 col-sm-12 col-md-6 col-md-offset-1">
                 <h3><b><?php echo $product->name ?></b></h3>
                 <hr>
-                <h5><b>Tình trạng: </b><?php echo ($product->status == 1 ? 'Còn hàng' : 'Hết hàng') ?></h5>
+                <h5><b>Tình trạng: </b><?php echo ($product->status == 1 ? "<span style='color: green; font-weight: bold'>Còn hàng</span>" : "<span style='color: #d9534f; font-weight: bold'>Hết hàng</span>") ?></h5>
                 <h5><b>Màu sắc: </b><?php echo $product->color ?></h5>
                 <h5><b>Bảo hành: </b><?php echo $product->warranty ?></h5>
                 <p style="display: inline-block;">Khuyến mại: </p>
@@ -102,7 +102,9 @@
                     ?>
                 </div>
                 <br>
+                <?php if($product->status == 1){ ?>
                 <a href="<?php echo base_url('cart/add/'.$product->id) ?>"><button type="button" class="btn btn-danger" style="font-size: 24px;">MUA HÀNG</button></a>
+                <?php } ?>
             </div>
         </div>
         <hr>

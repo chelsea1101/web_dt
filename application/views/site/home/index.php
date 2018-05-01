@@ -86,7 +86,12 @@
                     <?php 
                     }
                     ?>
-                    
+                    <?php if($row->status == 1){ ?>
+                    <a type="button" class="btn btn-success btn-lg btn-block" style="margin-top: 15px">Còn hàng</a>
+                    <?php }else{ ?>
+                    <a type="button" class="btn btn-danger btn-lg btn-block" style="margin-top: 15px">Hết hàng</a>
+                    <?php } ?>
+
                 </center>  
                 <div class="info_product">
                     <center>
@@ -151,7 +156,11 @@
                     <?php 
                     }
                     ?>
-                    
+                    <?php if($row->status == 1){ ?>
+                    <a type="button" class="btn btn-success btn-lg btn-block" style="margin-top: 15px">Còn hàng</a>
+                    <?php }else{ ?>
+                    <a type="button" class="btn btn-danger btn-lg btn-block" style="margin-top: 15px">Hết hàng</a>
+                    <?php } ?>
                 </center>  
                 <div class="info_product">
                     <center>
