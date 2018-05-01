@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Demo</title>
+	<meta charset="utf-8">
+	<link rel="stylesheet" type="text/css" href="css/bootstrap.min.css">
+	<link rel="stylesheet" type="text/css" href="css/style.css">
+    <link href="https://fonts.googleapis.com/css?family=Quicksand" rel="stylesheet">
+	<script type="text/javascript" src="js/jquery.min.js"></script>
+	<script type="text/javascript" src="js/bootstrap.min.js"></script>
+	<meta name="viewport" content="width=device-width,initial-scale=1">
+</head>
+<body>
+    <div class="menu">
+        <nav class="navbar navbar-inverse">
+            <div class="container">
+                <div class="navbar-header">
+                    <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>                        
+                    </button>
+                    <a class="navbar-brand" href="index.html">8Mobile</a>
+                </div>
+                <form class="navbar-form navbar-left">
+                    <div class="input-group">
+                        <input type="text" class="form-control" placeholder="Search">
+                        <div class="input-group-btn">
+                            <button class="btn btn-default" type="submit">
+                                <i class="glyphicon glyphicon-search"></i>
+                            </button>
+                        </div>
+                    </div>
+                </form>
+                <div class="collapse navbar-collapse" id="myNavbar">
+                    <ul class="nav navbar-nav">
+                        <li><a href="list_product.html">ĐIỆN THOẠI</a></li>
+                        <li><a href="list_product.html">PHỤ KIỆN</a></li>
+                        <li><a href="#">TIN KHUYẾN MẠI</a></li>
+                        <li><a href="contact.html">LIÊN HỆ</a></li>
+                    </ul>
+                    <ul class="nav navbar-nav navbar-right">
+                        <li><a href="#"><span class="glyphicon glyphicon-user"></span> ĐĂNG KÝ</a></li>
+                        <li><a href="#"><span class="glyphicon glyphicon-log-in"></span> ĐĂNG NHẬP</a></li>
+                    </ul>
+                    <ul class="nav navbar-nav navbar-left">
+                        <li><a href="cart.html"><span class="glyphicon glyphicon-shopping-cart"></span><span class="badge">4</span> GIỎ HÀNG</a></li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+    </div>
+    <div id="center_space" style="height: 800px;overflow: auto;">
+        <div id="cart">
+            <center>
+                <div class="container">
+                    <div class="col-xs-12 col-sm-12 col-md-12">
+                        <h1>Giỏ hàng của bạn</h1>
+                        <hr>
+                        <div class="table-responsive">
+                            <form method="post" action="">
+                                <table class="table" style="font-size: 16px;">
+                                    <thead>
+                                        <tr class="danger">
+                                            <th width="10%"></th>
+                                            <th width="30%">Sản phẩm</th>
+                                            <th width="15%">Đơn giá</th>
+                                            <th width="10%">Số lượng</th>
+                                            <th width="25%">Thành tiền</th>
+                                            <th></th>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        <tr>
+                                            <td width="10%"><img src="https://cdn.tgdd.vn/Products/Images/42/93705/iphone-7-red-128gb-300x300.jpg" class="img-thumbnail"></td>
+                                            <td width="30%"><a href="single_product.html">Samsung Galaxy S8</a></td>
+                                            <td width="15%">18.000.000 đ</td>
+                                            <td width="10%"><input type="number" name="txtQuantum" min="0" max="10"></td>
+                                            <td width="25%">18.000.000 đ</td>
+                                            <td width="5%"><a class="btn btn-danger btn-block" href=""><span class="glyphicon glyphicon-remove" aria-hidden="true"></span></a></td>
+                                        </tr>
+                                    </tbody>
+                                    <tbody>
+                                        <tr>
+                                            <td width="10%"><img src="https://cdn.tgdd.vn/Products/Images/42/93705/iphone-7-red-128gb-300x300.jpg" class="img-thumbnail"></td>
+                                            <td width="30%"><a href="single_product.html">Samsung Galaxy S8</a></td>
+                                            <td width="15%">18.000.000 đ</td>
+                                            <td width="10%"><input type="number" name="txtQuantum" min="0" max="10"></td>
+                                            <td width="25%">18.000.000 đ</td>
+                                            <td width="5%"><a class="btn btn-danger btn-block" href=""><span class="glyphicon glyphicon-remove" aria-hidden="true"></span></a></td>
+                                        </tr>
+                                    </tbody>
+                                    <tbody>
+                                        <tr>
+                                            <td width="10%"><img src="https://cdn.tgdd.vn/Products/Images/42/93705/iphone-7-red-128gb-300x300.jpg" class="img-thumbnail"></td>
+                                            <td width="30%"><a href="single_product.html">Samsung Galaxy S8</a></td>
+                                            <td width="15%">18.000.000 đ</td>
+                                            <td width="10%"><input type="number" name="txtQuantum" min="0" max="10"></td>
+                                            <td width="25%">18.000.000 đ</td>
+                                            <td width="5%"><a class="btn btn-danger btn-block" href=""><span class="glyphicon glyphicon-remove" aria-hidden="true"></span></a></td>
+                                        </tr>
+                                    </tbody>
+                                    <tbody>
+                                        <tr>
+                                            <td width="10%"></td>
+                                            <td width="30%"></td>
+                                            <td width="15%">Tổng tiền</td>
+                                            <td width="10%">1</td>
+                                            <td width="25%">18.000.000 đ</td>
+                                            <td width="5%"></td>
+                                        </tr>
+                                    </tbody>
+                                    <tbody>
+                                        <tr>
+                                            <td width="10%"></td>
+                                            <td width="30%"><a href="index.html"><button type="button" name="btnGoHome" class="btn btn-danger">Về trang chủ</button></a></td>
+                                            <td width="15%"><button type="button" name="btnUpdate" class="btn btn-danger">Cập nhật</button></td>
+                                            <td width="10%"></td>
+                                            <td width="25%"><a href="checkout.html"><button type="button" name="btnCheckout" class="btn btn-warning">MUA HÀNG</button></a></td>
+                                            <td width="5%"></td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </form>
+                        </div>
+                        <hr>
+                    </div>
+                    
+                </div>
+            </center>
+        </div>
+    </div>
+    <div class="footer">
+        <div class="container">
+            <div class="row">
+                <div class="col-xs-12 col-sm-4 col-md-4 introduction">
+                    <h4>GIỚI THIỆU</h4>
+                    <h5>Lorem ipsum dolor sit amet, ei quo dicat decore. Dolor blandit ei eum. Eam id nihil gloriatur, eum no ornatus aliquando. Ne oratio aeterno nec, sea dolores patrioque vulputate in. Malis vocent his ex.Nam justo menandri definitiones ut.</h5>
+                </div>
+                <div class="col-xs-6 col-sm-4 col-md-4 catalog">
+                    <h4>DANH MỤC SẢN PHẨM</h4>
+                    <a class="btn btn-warning btn-block" href="list_product.html">PHỤ KIỆN</a>
+                    <a class="btn btn-warning btn-block" href="list_product.html">PHỤ KIỆN</a>
+                    <a class="btn btn-warning btn-block" href="list_product.html">PHỤ KIỆN</a>
+                </div>
+                <div class="col-xs-6 col-sm-4 col-md-4 connect">
+                    <h4>LIÊN KẾT</h4>
+                    <h5>Tổng đài hỗ trợ: 19001009</h5>
+                    <h5>Mạng xã hội:</h5>
+                    <ul>
+                        <li><a href=""><img src="images/004-facebook.png" alt="facebook"></a></li>
+                        <li><a href=""><img src="images/001-youtube.png" alt="youtube"></a></li>
+                        <li><a href=""><img src="images/002-instagram.png" alt="instagram"></a></li>
+                        <li><a href=""><img src="images/003-twitter.png" alt="twitter"></a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

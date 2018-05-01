@@ -1,0 +1,343 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Demo</title>
+	<meta charset="utf-8">
+	<link rel="stylesheet" type="text/css" href="css/bootstrap.min.css">
+	<link rel="stylesheet" type="text/css" href="css/style.css">
+	<script type="text/javascript" src="js/jquery.min.js"></script>
+	<script type="text/javascript" src="js/bootstrap.min.js"></script>
+	<meta name="viewport" content="width=device-width,initial-scale=1">
+</head>
+<body>
+    <div class="menu">
+        <nav class="navbar navbar-inverse">
+            <div class="container">
+                <div class="navbar-header">
+                    <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>                        
+                    </button>
+                    <a class="navbar-brand" href="index.html">8Mobile</a>
+                </div>
+                <form class="navbar-form navbar-left">
+                    <div class="input-group">
+                        <input type="text" class="form-control" placeholder="Search">
+                        <div class="input-group-btn">
+                            <button class="btn btn-default" type="submit">
+                                <i class="glyphicon glyphicon-search"></i>
+                            </button>
+                        </div>
+                    </div>
+                </form>
+                <div class="collapse navbar-collapse" id="myNavbar">
+                    <ul class="nav navbar-nav">
+                        <li><a href="list_product.html">ĐIỆN THOẠI</a></li>
+                        <li><a href="list_product.html">PHỤ KIỆN</a></li>
+                        <li><a href="#">TIN KHUYẾN MẠI</a></li>
+                        <li><a href="contact.html">LIÊN HỆ</a></li>
+                    </ul>
+                    <ul class="nav navbar-nav navbar-right">
+                        <li><a href="#"><span class="glyphicon glyphicon-user"></span> ĐĂNG KÝ</a></li>
+                        <li><a href="#"><span class="glyphicon glyphicon-log-in"></span> ĐĂNG NHẬP</a></li>
+                    </ul>
+                    <ul class="nav navbar-nav navbar-left">
+                        <li><a href="cart.html"><span class="glyphicon glyphicon-shopping-cart"></span><span class="badge">4</span> GIỎ HÀNG</a></li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+    </div>
+    <div class="breadcrumb">
+        <div class="container">
+            <div class="row">
+                <ol class="breadcrumb">
+                    <li>
+                        <a href="index.html">Trang chủ</a>
+                    </li>
+                    <li>
+                        <a href="list_product.html">Samsung</a>
+                    </li>
+                    <li class="active">Samsung Galaxy S8</li>
+                    <hr>
+                </ol>
+            </div>
+        </div>
+    </div>
+    <div class="single_product">
+        <div class="container">
+            <div class="row">
+                <div class="col-xs-12 col-sm-12 col-md-5">
+                    <div class="panel panel-default">
+                        <div class="panel-body">
+                            <div id="image_list" class="carousel slide" data-ride="carousel" style="border: 2px solid #eee">
+                                <!-- Indicators -->
+
+                                <!-- Wrapper for slides -->
+                                <div class="carousel-inner" role="listbox">
+                                    <div class="item active">
+                                        <img src="https://cdn.fptshop.com.vn/Uploads/Originals/2018/1/31/636529900670656200_1.jpg" alt="">
+                                    </div>
+
+                                    <div class="item">
+                                        <img src="https://cdn.fptshop.com.vn/Uploads/Originals/2018/1/31/636529900670656200_1.jpg" alt="">
+                                    </div>
+
+                                    <div class="item">
+                                        <img src="https://cdn.fptshop.com.vn/Uploads/Originals/2018/1/31/636529900670656200_1.jpg" alt="">
+                                    </div>
+
+                                    <div class="item">
+                                        <img src="https://cdn.fptshop.com.vn/Uploads/Originals/2018/1/31/636529900670656200_1.jpg" alt="">
+                                    </div>
+                                </div>
+
+                                <!-- Left and right controls -->
+                                <a class="left carousel-control" href="#image_list" role="button" data-slide="prev">
+                                    <span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>
+                                    <span class="sr-only">Previous</span>
+                                </a>
+                                <a class="right carousel-control" href="#image_list" role="button" data-slide="next">
+                                    <span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span>
+                                    <span class="sr-only">Next</span>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-xs-12 col-sm-12 col-md-6 col-md-offset-1">
+                    <h3><b>Samsung Galaxy S8</b></h3>
+                    <hr>
+                    <h5><b>Tình trạng: </b>Còn hàng</h5>
+                    <h5><b>Màu sắc: </b>Đen / Vàng / Đỏ</h5>
+                    <h5><b>Bảo hành: </b>12 tháng</h5>
+                    <p style="display: inline-block;">Khuyến mại: </p>
+                    <h5>- Phiếu mua hàng 1 triêu</h5>
+                    <hr>
+                    <button type="button" class="btn btn-default btn-lg btn-block" data-toggle="modal" data-target="#specs">Thông số kỹ thuật</button>
+                    <div class="modal fade" id="specs" role="dialog">
+                        <div class="modal-dialog modal-lg">
+                            <div class="modal-content">
+                                <div class="modal-header">
+                                    <button type="button" class="close" data-dismiss="modal">&times;</button>
+                                    <h4 class="modal-title">Thông số kỹ thuật</h4>
+                                </div>
+                                <div class="modal-body">
+                                    <p>This is a large modal.</p>
+                                </div>
+                                <div class="modal-footer">
+                                    <button type="button" class="btn btn-default" data-dismiss="modal">Đóng</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <hr>
+                    <div class="price_product_2">
+                        <span>15.500.000 ₫</span>
+                        <del>16.000.000 ₫</del>
+                    </div>
+                    <br>
+                    <a href="cart.html"><button type="button" class="btn btn-danger" style="font-size: 24px;">MUA HÀNG</button></a>
+                </div>
+            </div>
+            <hr>
+            <div class="row">
+                <div class="col-xs-12 col-sm-12 col-md-9">
+                    <h3>Đặc điểm nổi bật</h3>
+                    <div class="panel panel-default">
+                        <div class="panel-body">
+                            <div id="image_features" class="carousel slide" data-ride="carousel">
+                                <!-- Indicators -->
+                                <ol class="carousel-indicators">
+                                    <li data-target="#image_features" data-slide-to="0" class="active"></li>
+                                    <li data-target="#image_features" data-slide-to="1"></li>
+                                    <li data-target="#image_features" data-slide-to="2"></li>
+                                    <li data-target="#image_features" data-slide-to="3"></li>
+                                </ol>
+
+                                <!-- Wrapper for slides -->
+                                <div class="carousel-inner" role="listbox">
+                                    <div class="item active">
+                                        <img src="https://cdn4.tgdd.vn/Products/Images/42/87840/Slider/-den.jpg" alt="">
+                                    </div>
+
+                                    <div class="item">
+                                        <img src="https://cdn4.tgdd.vn/Products/Images/42/87840/Slider/-den.jpg" alt="">
+                                    </div>
+
+                                    <div class="item">
+                                        <img src="https://cdn4.tgdd.vn/Products/Images/42/87840/Slider/-den.jpg" alt="">
+                                    </div>
+
+                                    <div class="item">
+                                        <img src="https://cdn4.tgdd.vn/Products/Images/42/87840/Slider/-den.jpg" alt="">
+                                    </div>
+                                </div>
+
+                                <!-- Left and right controls -->
+                                <a class="left carousel-control" href="#image_features" role="button" data-slide="prev">
+                                    <span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>
+                                    <span class="sr-only">Previous</span>
+                                </a>
+                                <a class="right carousel-control" href="#image_features" role="button" data-slide="next">
+                                    <span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span>
+                                    <span class="sr-only">Next</span>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                    <hr>
+                    <h3>Giới thiệu sản phẩm</h3>
+                    <div class="panel panel-default">
+                        <div class="panel-body">
+                            <!-- <div class="embed-responsive embed-responsive-16by9">
+                                <iframe class="embed-responsive-item" src="https://www.youtube.com/embed/zpOULjyy-n8?rel=0" allowfullscreen></iframe>
+                            </div> -->
+                            Galaxy S8 là siêu phẩm mới nhất được Samsung ra mắt vào ngày 29/3 với thiết kế nhỏ gọn hoàn toàn mới, màn hình vô cực viền siêu mỏng.Trên tay Galaxy S8❝Máy sử dụng rất mượt. Màn hình vô cực xem phim và chơi game quá đã, 5,8 inch mà nhỏ gọn hơn iphone 5,5 inch. Bảo vệ mống mắt, vân tay và khuôn mặt nhận diện cực nhạy ban ngày, thiếu sáng thì nên dùng vân tay. Mình là tín đồ iPhone mà chuyển sang dùng S8 thì đủ hiểu là máy chất như thế nào rồi.❞
+                        </div>
+                    </div>
+
+                    <hr>
+                    <h3>Bình luận </h3>
+
+                </div>
+                <div class="col-xs-12 col-sm-12 col-md-3">
+                    <h3>Các sản phẩm khác</h3>
+                    <div class="panel panel-default">
+                        <div class="panel-body">
+                            <div class="col-xs-6 col-sm-6 col-md-12 box_product" style="border: none;">
+                                <a href="single_product.html" class="thumbnail"><img src="https://cdn4.tgdd.vn/Products/Images/42/78124/iphone-7-plus-13-300x300.jpg" alt="Mobiistar-LAI-Zumbo-S-vang.png"></a>
+                                <center class="price_product">
+                                    <h4><b><a href="single_product.html">Samsung Galaxy S8</a></b></h4>
+                                    <del>16.000.000 ₫</del>
+                                    <span>15.500.000 ₫</span>
+                                </center>  
+                                <div class="info_product">
+                                    <center>
+                                        <center class="price_product_hover">
+                                            <a href="single_product.html" class="btn btn-warning btn-lg btn-block">Xem chi tiết</a>
+                                        </a>
+                                            <h4><b><a href="single_product.html">Samsung Galaxy S8</a></b></h4>
+                                            <del>16.000.000 ₫</del>
+                                            <span>15.500.000 ₫</span><br><br>
+                                        </center>
+                                        <a href="single_product.html">
+                                            <p>Màu sắc: Đen / Vàng / Đỏ</p>
+                                            <p>Bảo hành: 12 Tháng</p>
+                                            <p style="display: inline-block;">Khuyến mại: </p>
+                                            <p>- Phiếu mua hàng 1 triêu</p>
+                                    </center>
+                                </div>
+                            </div>
+                            <div class="col-xs-6 col-sm-6 col-md-12 box_product" style="border: none;">
+                                <a href="single_product.html" class="thumbnail"><img src="https://cdn4.tgdd.vn/Products/Images/42/78124/iphone-7-plus-13-300x300.jpg" alt="Mobiistar-LAI-Zumbo-S-vang.png"></a>
+                                <center class="price_product">
+                                    <h4><b><a href="single_product.html">Samsung Galaxy S8</a></b></h4>
+                                    <del>16.000.000 ₫</del>
+                                    <span>15.500.000 ₫</span>
+                                </center>  
+                                <div class="info_product">
+                                    <center>
+                                        <center class="price_product_hover">
+                                            <a href="single_product.html" class="btn btn-warning btn-lg btn-block">Xem chi tiết</a>
+                                        </a>
+                                            <h4><b><a href="single_product.html">Samsung Galaxy S8</a></b></h4>
+                                            <del>16.000.000 ₫</del>
+                                            <span>15.500.000 ₫</span><br><br>
+                                        </center>
+                                        <a href="single_product.html">
+                                            <p>Màu sắc: Đen / Vàng / Đỏ</p>
+                                            <p>Bảo hành: 12 Tháng</p>
+                                            <p style="display: inline-block;">Khuyến mại: </p>
+                                            <p>- Phiếu mua hàng 1 triêu</p>
+                                    </center>
+                                </div>
+                            </div>
+                            <div class="col-xs-6 col-sm-6 col-md-12 box_product" style="border: none;">
+                                <a href="single_product.html" class="thumbnail"><img src="https://cdn4.tgdd.vn/Products/Images/42/78124/iphone-7-plus-13-300x300.jpg" alt="Mobiistar-LAI-Zumbo-S-vang.png"></a>
+                                <center class="price_product">
+                                    <h4><b><a href="single_product.html">Samsung Galaxy S8</a></b></h4>
+                                    <del>16.000.000 ₫</del>
+                                    <span>15.500.000 ₫</span>
+                                </center>  
+                                <div class="info_product">
+                                    <center>
+                                        <center class="price_product_hover">
+                                            <a href="single_product.html" class="btn btn-warning btn-lg btn-block">Xem chi tiết</a>
+                                        </a>
+                                            <h4><b><a href="single_product.html">Samsung Galaxy S8</a></b></h4>
+                                            <del>16.000.000 ₫</del>
+                                            <span>15.500.000 ₫</span><br><br>
+                                        </center>
+                                        <a href="single_product.html">
+                                            <p>Màu sắc: Đen / Vàng / Đỏ</p>
+                                            <p>Bảo hành: 12 Tháng</p>
+                                            <p style="display: inline-block;">Khuyến mại: </p>
+                                            <p>- Phiếu mua hàng 1 triêu</p>
+                                    </center>
+                                </div>
+                            </div>
+                            <div class="col-xs-6 col-sm-6 col-md-12 box_product" style="border: none;">
+                                <a href="single_product.html" class="thumbnail"><img src="https://cdn4.tgdd.vn/Products/Images/42/78124/iphone-7-plus-13-300x300.jpg" alt="Mobiistar-LAI-Zumbo-S-vang.png"></a>
+                                <center class="price_product">
+                                    <h4><b><a href="single_product.html">Samsung Galaxy S8</a></b></h4>
+                                    <del>16.000.000 ₫</del>
+                                    <span>15.500.000 ₫</span>
+                                </center>  
+                                <div class="info_product">
+                                    <center>
+                                        <center class="price_product_hover">
+                                            <a href="single_product.html" class="btn btn-warning btn-lg btn-block">Xem chi tiết</a>
+                                        </a>
+                                            <h4><b><a href="single_product.html">Samsung Galaxy S8</a></b></h4>
+                                            <del>16.000.000 ₫</del>
+                                            <span>15.500.000 ₫</span><br><br>
+                                        </center>
+                                        <a href="single_product.html">
+                                            <p>Màu sắc: Đen / Vàng / Đỏ</p>
+                                            <p>Bảo hành: 12 Tháng</p>
+                                            <p style="display: inline-block;">Khuyến mại: </p>
+                                            <p>- Phiếu mua hàng 1 triêu</p>
+                                    </center>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <hr>
+        </div>
+    </div>
+    <div class="footer">
+        <div class="container">
+            <div class="row">
+                <div class="col-xs-12 col-sm-4 col-md-4 introduction">
+                    <h4>GIỚI THIỆU</h4>
+                    <p>Lorem ipsum dolor sit amet, ei quo dicat decore. Dolor blandit ei eum. Eam id nihil gloriatur, eum no ornatus aliquando. Ne oratio aeterno nec, sea dolores patrioque vulputate in. Malis vocent his ex.Nam justo menandri definitiones ut.</p>
+                </div>
+                <div class="col-xs-6 col-sm-4 col-md-4 catalog">
+                    <h4>DANH MỤC SẢN PHẨM</h4>
+                    <ul>
+                        <li><a href="list_product.html">Điện thoại</a></li>
+                        <li><a href="list_product.html">Phụ kiện</a></li>
+                        <li><a href="">Tin khuyến mại</a></li>
+                        <li><a href="contact.html">Liên hệ</a></li>
+                    </ul>
+                </div>
+                <div class="col-xs-6 col-sm-4 col-md-4 connect">
+                    <h4>LIÊN KẾT</h4>
+                    <p>TỔNG ĐÀI HỖ TRỢ: 19001009</p>
+                    <p>MẠNG XÃ HỘI:</p>
+                    <ul>
+                        <li><a href=""><img src="images/004-facebook.png" alt="facebook"></a></li>
+                        <li><a href=""><img src="images/001-youtube.png" alt="youtube"></a></li>
+                        <li><a href=""><img src="images/002-instagram.png" alt="instagram"></a></li>
+                        <li><a href=""><img src="images/003-twitter.png" alt="twitter"></a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
