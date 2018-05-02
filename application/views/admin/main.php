@@ -11,7 +11,7 @@
 	<div id="rightSide">
 		<?php $this->load->view('admin/header'); ?>
 
-		//content
+
 		<?php $this->load->view($temp, $this->data); ?>
 
 		<?php $this->load->view('admin/footer'); ?>

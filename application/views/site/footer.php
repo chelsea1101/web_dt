@@ -7,8 +7,9 @@
         <div class="col-xs-6 col-sm-4 col-md-4 catalog">
             <h4>DANH MỤC SẢN PHẨM</h4>
             <?php foreach ($list_parent as $row) {?>
-                <a class="btn btn-warning btn-block" href="<?php echo base_url('product/catalog/'.$row->id) ?>"><?php echo $row->name ?></a>
+                <a class="btn btn-warning btn-block" href="<?php echo base_url('product/catalog/'.$row->id) ?>" style="text-transform: uppercase; font-weight: bold; color: #d9534f"><?php echo $row->name ?></a>
             <?php } ?>
+            <a class="btn btn-warning btn-block" href="<?php echo base_url('contact') ?>" style="text-transform: uppercase; font-weight: bold; color: #d9534f">Liên hệ</a>
         </div>
         <div class="col-xs-6 col-sm-4 col-md-4 connect">
             <h4>LIÊN KẾT</h4>

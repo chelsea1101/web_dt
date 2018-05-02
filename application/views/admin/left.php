@@ -1,8 +1,7 @@
 <div id="leftSide" style="padding-top:30px;">
 	<div class="sideProfile">
 		<a href="#" title="" class="profileFace"><img width="40" src="<?php echo public_url('admin') ?>/images/user.png" /></a>
-		<span>Xin chào: <strong>admin!</strong></span>
-		<span>Admin</span>
+		<span>Xin chào: <strong>Admin!</strong></span>
 		<div class="clear"></div>
 	</div>
 	<div class="sidebarSep"></div>		    
@@ -36,7 +35,7 @@
 		<li class="product">
 			<a href="admin/product.html" class=" exp" >
 				<span>Sản phẩm</span>
-				<strong>3</strong>
+				<strong>2</strong>
 			</a>
 			
 			<ul class="sub">
@@ -45,9 +44,6 @@
 				</li>
 				<li >
 					<a href="<?php echo admin_url('catalog') ?>">Danh mục</a>
-				</li>
-				<li >
-					<a href="admin/comment.html">Phản hồi</a>
 				</li>
 			</ul>
 						
@@ -64,7 +60,7 @@
 					<a href="<?php echo admin_url('admin') ?>">Ban quản trị</a>
 				</li>
 				<li >
-					<a href="admin/user.html">Thành viên</a>
+					<a href="<?php echo admin_url('user') ?>">Thành viên</a>
 				</li>
 			</ul>			
 		</li>

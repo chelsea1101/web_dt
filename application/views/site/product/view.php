@@ -158,6 +158,7 @@
 
                 <hr>
                 <h3>Bình luận </h3>
+                <div class="fb-comments" data-href="http://localhost:3030/web_dt/product/view/<?php echo $product->id?>" width="100%" data-numposts="5"></div>
 
             </div>
             <div class="col-xs-12 col-sm-12 col-md-3">

@@ -1,3 +1,15 @@
+<div class="breadcrumb">
+    <div class="container">
+        <div class="row">
+            <ol class="breadcrumb">
+                <li>
+                    <a href="<?php echo base_url() ?>">Trang chủ</a>
+                </li>
+                <li class="active">Giỏ hàng</li>
+            </ol>
+        </div>
+    </div>
+</div>
 <div id="center_space" style="min-height: 1000px;overflow: auto;">
     <div id="cart">
         <center>

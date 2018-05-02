@@ -63,7 +63,7 @@
 
 					<td>
 						<span title="<?php echo $row->created ?>" class="tipS">
-							<?php echo get_date($row->created) ?>
+							<?php echo $row->created ?>
 						</span>
 					</td>
 

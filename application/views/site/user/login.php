@@ -1,3 +1,15 @@
+<div class="breadcrumb">
+    <div class="container">
+        <div class="row">
+            <ol class="breadcrumb">
+                <li>
+                    <a href="<?php echo base_url() ?>">Trang chủ</a>
+                </li>
+                <li class="active">Đăng nhập</li>
+            </ol>
+        </div>
+    </div>
+</div>
 <center style="min-height: 500px">
     <div class="container">
         <div class="col-xs-12 col-sm-12 col-md-12">

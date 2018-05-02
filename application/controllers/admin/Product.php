@@ -16,11 +16,11 @@ Class Product extends MY_Controller
 		$id = $this->input->get('id');
 		$id = intval($id);
 		$input['where'] = array();
-		if($id > 0 )
-		{
-			$input['where']['id'] = $id;
-			$this->data['filter_id'] = $this->input->get('id');////////
-		}
+		// if($id > 0 )
+		// {
+		// 	$input['where']['id'] = $id;
+		// 	$this->data['filter_id'] = $this->input->get('id');////////
+		// }
 		$name = $this->input->get('name');
 		if($name)
 		{
@@ -317,6 +317,16 @@ Class Product extends MY_Controller
 			$this->session->set_flashdata('message', 'Không tồn tại sản phẩm');
 			redirect(admin_url('product'));
 		}
+
+		//ktra sp co anh bia ko
+		$this->load->model('slide_model');
+		$slide = $this->slide_model->get_info_rule(array('product_id' => $id), 'id');
+		if($slide)
+		{
+			$this->session->set_flashdata('message', 'Sản phẩm '.$product->name.' này có chứa ảnh bìa, cần xóa ảnh bìa trước khi xóa sản phẩm');
+			redirect(admin_url('product'));
+		}
+
 		$this->product_model->delete($id);
 
 		$image = './upload/product/'.$product->image;
@@ -350,6 +360,7 @@ Class Product extends MY_Controller
 				}
 			}
 		}
+
 	}
 }
 ?>

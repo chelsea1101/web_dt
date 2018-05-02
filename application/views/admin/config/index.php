@@ -6,13 +6,6 @@
 	<div class="widget">
 		<?php $this->load->view('admin/message', $this->data) ?>
 		<div class="title">
-			<span class="titleIcon">
-				<div class="checker" id="uniform-titleCheck">
-					<span>
-						<input type="checkbox" id="titleCheck" name="titleCheck" style="opacity: 0;">
-					</span>
-				</div>
-			</span>
 			<h6>Cấu hình website</h6>
 		 	<div class="num f12">Tổng số: <b>1</b></div>
 		</div>
@@ -20,8 +13,7 @@
 		<table cellpadding="0" cellspacing="0" width="100%" class="sTable mTable myTable withCheck" id="checkAll">
 			<thead>
 				<tr>
-					<td style="width:10px;"><img src="<?php echo public_url('admin') ?>/images/icons/tableArrows.png" /></td>
-					<td style="width:80px;">Mã số</td>
+					<td>Mã số</td>
 					<td>Email</td>
 					<td>Tên website</td>
 					<td>Địa chỉ</td>
@@ -32,31 +24,13 @@
 					<td>Youtube</td>
 					<td>Instagram</td>
 					<td>Twitter</td>
-					<td style="width:100px;">Hành động</td>
+					<td>Hành động</td>
 				</tr>
 			</thead>
-			
- 			<tfoot>
-				<tr>
-					<td colspan="13">
-					     <div class="list_action itemActions">
-								<a href="#submit" id="submit" class="button blueB" url="user/del_all.html">
-									<span style='color:white;'>Xóa hết</span>
-								</a>
-						 </div>
-							
-					     <div class='pagination'>
-			               			            </div>
-					</td>
-				</tr>
-			</tfoot>
  			
 			<tbody>
 				<?php foreach ($list as $row):?>
 				<tr>
-					<td>
-						<input type="checkbox" name="id[]" value="<?php echo $row->id ?>" />
-					</td>
 					
 					<td class="textC"><?php echo $row->id ?></td>
 					

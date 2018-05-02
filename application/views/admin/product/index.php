@@ -21,12 +21,6 @@
 						<tbody>
 							<tr>
 								<td class="label" style="width:40px;">
-									<label for="filter_id">Mã số</label>
-								</td>
-								<td class="item">
-									<input name="id" value="<?php if(isset($filter_id)) echo $filter_id ?>" id="filter_id" type="text" style="width:55px;"> <!-- /// -->
-								</td>
-								<td class="label" style="width:40px;">
 									<label for="filter_id">Tên</label>
 								</td>
 								<td class="item" style="width:155px;">

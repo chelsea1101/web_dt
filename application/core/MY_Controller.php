@@ -13,6 +13,17 @@ Class MY_Controller extends CI_Controller
 			{
 				$this->load->helper('admin');
 				$this->_check_login();
+				// $this->load->model('admin_model');
+				// if(!$this->session->userdata('login'))
+				// {
+				// 	redirect(admin_url());
+				// }
+
+				// $admin_id = $this->session->userdata('login');
+				// $admin = $this->admin_model->get_info($admin_id);
+				// $this->data['admin'] = $admin;
+				
+
 				break;
 			}
 			

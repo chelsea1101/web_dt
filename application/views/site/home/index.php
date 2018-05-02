@@ -33,7 +33,7 @@
             </div>
             <div class="col-xs-12 col-md-4 sales">
                 <div class="col-xs-12 col-sm-12 col-md-12 hidden-xs box_promo" style="background-color:#f0ad4e; padding: 20px">
-                    <span class="glyphicon glyphicon-thumbs-up" aria-hidden="true" style="font-size: 181px"></span>
+                    <span class="glyphicon glyphicon-thumbs-up" aria-hidden="true" id="promo"></span>
                     <h3><b>CHẤT LƯỢNG ĐẢM BẢO</b></h3>
                 </div>
             </div>

@@ -2,7 +2,19 @@
     $price_from_select = isset($price_from) ? intval($price_from) : 0;
     $price_to_select = isset($price_to) ? intval($price_to) : 0;
 ?>
-<div class="promo">
+<div class="breadcrumb">
+    <div class="container">
+        <div class="row">
+            <ol class="breadcrumb">
+                <li>
+                    <a href="<?php echo base_url() ?>">Trang chủ</a>
+                </li>
+                <li class="active"><?php echo $catalog->name ?></li>
+            </ol>
+        </div>
+    </div>
+</div>
+<!-- <div class="promo">
     <div class="container">
         <div class="col-xs-12 col-sm-6 col-md-3 box_promo" style="background-color:#e67e22">
             <span class="glyphicon glyphicon-refresh" aria-hidden="true"></span>
@@ -21,7 +33,7 @@
             <h4>QUÀ TẶNG HẤP DẪN</h4>
         </div>
     </div>
-</div>
+</div> -->
 
 <div id="wrapper" style="min-height: 1000px;">
     <div class="list_product">
@@ -64,7 +76,6 @@
                             </div>
                             <button type="submit" class="btn btn-warning">Lọc</button>
                             <a href="<?php base_url('product/catalog/'.$catalog->id) ?>" class="btn btn-info">Reset</a>
-                            <button type="reset" class="btn btn-info">Reset</button>
                         </form>
                     </div>
                 </div>

@@ -25,6 +25,7 @@
 				$this->form_validation->set_rules('re_password', 'Nhập lại mật khẩu', 'required|matches[password]');
 				$this->form_validation->set_rules('phone', 'Số điện thoại', 'required');
 				$this->form_validation->set_rules('place', 'Địa chỉ', 'required');
+				$this->form_validation->set_rules('gender', 'Giới tính', 'required');
 
 				if($this->form_validation->run())
 				{
@@ -35,6 +36,7 @@
 						'name' => $this->input->post('name'),
 						'phone' => $this->input->post('phone'),
 						'place' => $this->input->post('place'),
+						'gender' => $this->input->post('gender'),
 						'password' => $password,
 						'email' => $this->input->post('email'),
 					);

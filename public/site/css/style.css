@@ -280,6 +280,10 @@ iframe
 	font-weight: bolder;
 	font-size: 20px;
 }
+#promo
+{
+	font-size: 181px;
+}
 @media (max-width: 767px) 
 { 
 	.box_product
@@ -293,12 +297,15 @@ iframe
 	{
 		
 	}
-}
+}*/
 @media (min-width: 992px) and (max-width: 1199px)
 {
-
+	#promo
+	{
+		font-size: 106px;
+	}
 }
-@media (min-width: 1200px)
+/*@media (min-width: 1200px)
 {
 
 }*/

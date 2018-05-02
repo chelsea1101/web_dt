@@ -16,7 +16,7 @@ $(function() {
                 <span class="icon-bar"></span>
                 <span class="icon-bar"></span>                        
             </button>
-            <a class="navbar-brand" href="<?php echo base_url() ?>">8Mobile</a>
+            <a class="navbar-brand" href="<?php echo base_url() ?>" style="color: #ffc26b; text-shadow:2px 2px  2px gray;">8Mobile</a>
         </div>
         <form class="navbar-form navbar-left" method="get" action="<?php echo base_url('product/search')?>">
             <div class="input-group">
