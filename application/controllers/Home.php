@@ -47,6 +47,8 @@
 			$product_accessories_hot = $this->product_model->get_list($input);
 			$this->data['product_accessories_hot'] = $product_accessories_hot;
 
+			
+
 			// foreach ($list_phone as $row) {
 
 			// 	$this->load->model('product_model');

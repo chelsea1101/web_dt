@@ -89,6 +89,7 @@ Class Product extends MY_Controller
 			$input['where'] = array('catalog_id' => $id);
 		}
 
+		$is_get = 1;
 		//loc
 		if($this->input->get())
 		{
@@ -130,7 +131,12 @@ Class Product extends MY_Controller
 				$input['order'] = array('price','ASC');
 			else
 				$input['order'] = array('price','DESC');
-			
+
+			// $curent_url = (isset($_SERVER['HTTPS']) ? "https" : "http") . "://$_SERVER[HTTP_HOST]$_SERVER[REQUEST_URI]";
+			// $path = parse_url($curent_url)['query'];
+			// pre(parse_url($curent_url)['path']);
+			$is_get = 0;
+
 		}
 
 		if(!isset($order))
@@ -143,9 +149,19 @@ Class Product extends MY_Controller
 		$this->load->library('pagination');
 		$config = array();
 		$config['total_rows'] = $total_rows; //tong sp tren website
-		$config['base_url'] = base_url('product/catalog/'.$id); //link hien thi ra ds sp
-		$config['per_page'] = 8; //slg hien thi tren 1 trang
+		if ($is_get == 0) {
+			$config['reuse_query_string'] = FALSE;
+			$config['suffix'] = '?price_from='.$price_from.'&price_to='.$price_to.'&manufacturer='.$manufacturer.'&order='.$order;
+			$config['base_url'] = base_url('product/catalog/'.$id); //link hien thi ra ds sp
+			$config['first_url'] = $config['base_url'] . '/' . $config['suffix'];
+
+		}
+		$config['base_url'] = base_url('product/catalog/'.$id); 
+		// $config['first_url'] = $config['base_url'] . $config['suffix'];
+		$config['per_page'] = 2; //slg hien thi tren 1 trang
 		$config['uri_segment'] = 4; //pahn doan hien thi so trang tren url
+
+
 
 		$config['full_tag_open'] = '<ul class="pagination"><li>';
     	$config['full_tag_close'] = '</li></ul>';
@@ -186,6 +202,9 @@ Class Product extends MY_Controller
 			$this->db->where_in('catalog_id', $catalog_subs_id);
 		}
 		
+		$curent_url = (isset($_SERVER['HTTPS']) ? "https" : "http") . "://$_SERVER[HTTP_HOST]$_SERVER[REQUEST_URI]";
+		$reset = 'http://localhost:3030'.parse_url($curent_url)['path'];
+		$this->data['reset'] = $reset;
 
 		$list = $this->product_model->get_list($input);
 		$this->data['list'] = $list;

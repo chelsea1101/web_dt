@@ -75,7 +75,7 @@
                                 </select>
                             </div>
                             <button type="submit" class="btn btn-warning">Lọc</button>
-                            <a href="<?php base_url('product/catalog/'.$catalog->id) ?>" class="btn btn-info">Reset</a>
+                            <a href="<?php echo $reset ?>" class="btn btn-info">Reset</a>
                         </form>
                     </div>
                 </div>

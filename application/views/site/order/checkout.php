@@ -5,7 +5,7 @@
                 <li>
                     <a href="<?php echo base_url() ?>">Trang chủ</a>
                 </li>
-                <li class="active">Thanh toán</li>
+                <li class="active">Đặt hàng</li>
             </ol>
         </div>
     </div>
@@ -15,7 +15,7 @@
         <center>
             <div class="container">
                 <div class="col-xs-12 col-sm-12 col-md-12">
-                    <h1>Thông tin thanh toán</h1>
+                    <h1>Thông tin đặt hàng</h1>
                     <hr>
                     <div class="col-xs-12 col-sm-12 col-md-8 col-md-offset-2">
                         <form class="form-horizontal" action="<?php echo base_url('order/checkout') ?>" method="post">
@@ -78,7 +78,7 @@
                             </div>
                             <div class="form-group"> 
                                 <div class="col-xs-12 col-sm-12 col-md-8 col-md-offset-2">
-                                    <button type="submit" class="btn btn-danger btn-lg">THANH TOÁN</button>
+                                    <button type="submit" class="btn btn-danger btn-lg">ĐẶT HÀNG</button>
                                 </div>
                             </div>
                         </form>

@@ -57,10 +57,10 @@
                                 <tbody>
                                     <tr>
                                         <td width="10%"></td>
-                                        <td width="30%"><a href="<?php echo base_url() ?>"><button type="button" name="btnGoHome" class="btn btn-danger">Về trang chủ</button></a></td>
+                                        <td width="30%"><a href="<?php echo base_url() ?>"><button type="button" name="btnGoHome" class="btn btn-danger">Mua tiếp</button></a></td>
                                         <td width="15%"><button type="submit" name="btnUpdate" class="btn btn-danger">Cập nhật</button></td>
                                         <td width="10%"></td>
-                                        <td width="25%"><a href="<?php echo base_url('order/checkout') ?>"><button type="button" name="btnCheckout" class="btn btn-warning">MUA HÀNG</button></a></td>
+                                        <td width="25%"><a href="<?php echo base_url('order/checkout') ?>"><button type="button" name="btnCheckout" class="btn btn-warning">ĐẶT HÀNG</button></a></td>
                                         <td width="8%"></td>
                                     </tr>
                                 </tbody>
