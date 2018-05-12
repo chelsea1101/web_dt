@@ -209,6 +209,16 @@ Class Product extends MY_Controller
 		$list = $this->product_model->get_list($input);
 		$this->data['list'] = $list;
 
+		$input_price_max = array();
+		$input_price_max['order'] = array('price','DESC');
+		$input_price_max['limit'] = array(1,0);
+		$list_price_max = $this->product_model->get_list($input_price_max);
+
+		foreach ($list_price_max as $row) {
+			$price_max = $row->price;
+		}
+		$this->data['price_max'] = $price_max;
+
 		$this->data['temp'] = 'site/product/catalog';
 		$this->load->view('site/layout', $this->data);
 	}

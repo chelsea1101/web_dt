@@ -1,6 +1,7 @@
 <?php 
     $price_from_select = isset($price_from) ? intval($price_from) : 0;
     $price_to_select = isset($price_to) ? intval($price_to) : 0;
+    $price_max = isset($price_max) ? intval($price_max) : 0;
 ?>
 <div class="breadcrumb">
     <div class="container">
@@ -45,7 +46,7 @@
                             <div class="form-group">
                                 <label for="price_from">Giá từ</label>
                                 <select class="form-control" id="price_from" name="price_from">
-                                    <?php for($i = 0; $i <= 50000000; $i = $i + 2000000){ ?>
+                                    <?php for($i = 0; $i <= $price_max; $i = $i + 1000000){ ?>
                                     <option <?php echo ($price_from_select == $i) ? 'selected' : '' ?> value="<?php echo $i?>"><?php echo number_format($i) ?> đ</option>
                                     <?php } ?>  
                                 </select>
@@ -53,7 +54,7 @@
                             <div class="form-group">
                                 <label for="price_to">Giá đến</label>
                                 <select class="form-control" id="price_to" name="price_to">
-                                    <?php for($i = 0; $i <= 50000000; $i = $i + 2000000){ ?>
+                                    <?php for($i = 0; $i <= $price_max; $i = $i + 1000000){ ?>
                                     <option <?php echo ($price_to_select == $i) ? 'selected' : '' ?> value="<?php echo $i?>"><?php echo number_format($i) ?> đ</option>
                                     <?php } ?>
                                 </select>
