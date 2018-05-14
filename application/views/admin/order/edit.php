@@ -99,7 +99,7 @@
 							<option value="0" <?php echo  ($info->status == 0) ? 'selected' : ''?>>Chờ xử lý</option>
 	                        <option value="1" <?php echo  ($info->status == 1) ? 'selected' : ''?>>Đang vận chuyển</option>
 	                        <option value="2" <?php echo  ($info->status == 2) ? 'selected' : ''?>>Hoàn thành</option>
-	                        <option value="3" <?php echo  ($info->status == 3) ? 'selected' : ''?>>Hủy đơn hàng</option>
+<!-- 	                        <option value="3" <?php echo  ($info->status == 3) ? 'selected' : ''?>>Hủy đơn hàng</option> -->
 	                    </select>
 						<div name="name_error" class="clear error"></div>
 					</div>

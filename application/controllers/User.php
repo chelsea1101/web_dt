@@ -140,6 +140,23 @@
 
 			$this->data['user'] = $user;
 
+			// $this->load->model('order_model');
+			// $this->load->model('order_detail_model');
+			// $this->load->model('product_model');
+			// $input = array();
+			// $input['where'] = array('user_id' => $user_id);
+			// $orders = $this->order_model->get_list($input);
+			// foreach ($orders as $order) {
+			// 	$input = array();
+			// 	$input['where'] = array('order_id' => $order->id);
+			// 	$orders_detail = $this->order_detail_model->get_list($input);
+			// 	foreach ($orders_detail as $order_detail) {
+			// 		$input = array();
+			// 		$input['where'] = array('id' => $order_detail->product_id);
+			// 		$products = $this->product_model->get_list($input);
+			// 	}
+			// }
+
 			$this->data['temp'] = 'site/user/index';
 			$this->load->view('site/layout', $this->data);
 		}

@@ -42,8 +42,7 @@ Class Catalog extends MY_controller
 				$data = array(
 					'name' => $name,
 					'parent_id' => $parent_id,
-					'position' => intval($position),
-					'active' => $active
+					'position' => intval($position)
 				);
 				if($this->catalog_model->create($data))
 					$this->session->set_flashdata('message', 'Thêm mới thành công');
@@ -90,8 +89,7 @@ Class Catalog extends MY_controller
 				$data = array(
 					'name' => $name,
 					'parent_id' => $parent_id,
-					'position' => intval($position),
-					'active' => $active
+					'position' => intval($position)
 				);
 				if($this->catalog_model->update($id, $data))
 					$this->session->set_flashdata('message', 'Cập nhật thành công');

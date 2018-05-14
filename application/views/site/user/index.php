@@ -50,5 +50,10 @@
                 </form>
             </div>
         </div>
+<!--         <div class="col-xs-12 col-sm-12 col-md-12">
+            <h1>Các đơn hàng đã mua</h1>
+            <hr>
+
+        </div> -->
     </div>
 </center>

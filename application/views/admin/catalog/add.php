@@ -49,15 +49,6 @@
 					<div class="clear"></div>
 				</div>
 
-				<div class="formRow">
-					<label class="formLeft" for="param_name">Trạng thái:<span class="req"></span></label>
-					<div class="formRight">
-						<span class="oneTwo"><input name="active" id="param_active" value="<?php echo set_value('active')?>" _autocheck="true" type="text"></span>
-						<span name="active_autocheck" class="autocheck"></span>
-						<div name="active_error" class="clear error"><?php echo form_error('active') ?></div>
-					</div>
-					<div class="clear"></div>
-				</div>
 
 				<div class="formSubmit">
            			<input type="submit" value="Thêm mới" class="redB">

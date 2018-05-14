@@ -41,6 +41,13 @@ Class Product extends MY_Controller
 		$this->load->library('pagination');
 		$config = array();
 		$config['total_rows'] = $total_rows; //tong sp tren website
+		if (!empty($_GET)) {
+			$config['reuse_query_string'] = FALSE;
+			$config['suffix'] = '?name='.$name.'&catalog='.$catalog_id;
+			$config['base_url'] = admin_url('product/index/'); //link hien thi ra ds sp
+			$config['first_url'] = $config['base_url'] . '/' . $config['suffix'];
+
+		}
 		$config['base_url'] = admin_url('product/index'); //link hien thi ra ds sp
 		$config['per_page'] = 5; //slg hien thi tren 1 trang
 		$config['uri_segment'] = 4; //pahn doan hien thi so trang tren url
@@ -144,7 +151,6 @@ Class Product extends MY_Controller
 				$descript = $this->input->post('descript');
 				$is_hot = $this->input->post('is_hot');
 				$status = $this->input->post('status');
-				$active = $this->input->post('active');
 
 				//luu du lieu can them
 				$data = array(
@@ -161,8 +167,7 @@ Class Product extends MY_Controller
 					'specs' => $specs,
 					'descript' => $descript,
 					'is_hot' => $is_hot,
-					'status' => $status,
-					'active' => $active,
+					'status' => $status
 					
 				);
 				if($this->product_model->create($data))
@@ -251,7 +256,6 @@ Class Product extends MY_Controller
 				$descript = $this->input->post('descript');
 				$is_hot = $this->input->post('is_hot');
 				$status = $this->input->post('status');
-				$active = $this->input->post('active');
 
 				//luu du lieu can them
 				$data = array(
@@ -265,8 +269,7 @@ Class Product extends MY_Controller
 					'specs' => $specs,
 					'descript' => $descript,
 					'is_hot' => $is_hot,
-					'status' => $status,
-					'active' => $active
+					'status' => $status
 				);
 
 				if($image != '')

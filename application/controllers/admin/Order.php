@@ -26,20 +26,27 @@ Class Order extends MY_Controller
 		if($name)
 		{
 			$input['like'] = array('user_name', $name);
-			$this->data['filter_iname'] = $this->input->get('name');////////
+			$this->data['filter_iname'] = $this->input->get('name');
 		}
 		$phone = $this->input->get('phone');
 		if($phone)
 		{
 			$input['like'] = array('user_phone', $phone);
-			$this->data['filter_phone'] = $this->input->get('phone');////////
+			$this->data['filter_phone'] = $this->input->get('phone');
 		}
 		$email = $this->input->get('email');
 		if($email)
 		{
 			$input['like'] = array('user_email', $email);
-			$this->data['filter_email'] = $this->input->get('email');////////
+			$this->data['filter_email'] = $this->input->get('email');
 		}
+		$status = $this->input->get('status');
+		if($status != '')
+		{
+			$input['where']['status'] = $status;
+			$this->data['filter_status'] = $this->input->get('status');
+		}
+
 
 		$total_rows = $this->order_model->get_total($input); 
 		$this->data['total_rows'] = $total_rows;
@@ -47,6 +54,13 @@ Class Order extends MY_Controller
 		$this->load->library('pagination');
 		$config = array();
 		$config['total_rows'] = $total_rows; //tong sp tren website
+		if (!empty($_GET)) {
+			$config['reuse_query_string'] = FALSE;
+			$config['suffix'] = '?id='.$id.'&name='.$name.'&email='.$email.'&phone='.$phone.'&status='.$status;
+			$config['base_url'] = admin_url('order/index/'); //link hien thi ra ds sp
+			$config['first_url'] = $config['base_url'] . '/' . $config['suffix'];
+
+		}
 		$config['base_url'] = admin_url('order/index'); //link hien thi ra ds sp
 		$config['per_page'] = 5; //slg hien thi tren 1 trang
 		$config['uri_segment'] = 4; //pahn doan hien thi so trang tren url

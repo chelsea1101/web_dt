@@ -17,7 +17,6 @@
 					<td>Tên danh mục</td>
 					<td>Danh mục cha</td>
 					<td>Vị trí</td>
-					<td>Trạng thái</td>
 					<td style="width:100px;">Hành động</td>
 				</tr>
 			</thead>
@@ -51,11 +50,6 @@
 						</span>
 					</td>
 
-					<td>
-						<span title="<?php echo $row->active ?>" class="tipS">
-							<?php echo $row->active ?>
-						</span>
-					</td>
 					
 					
 					<td class="option">

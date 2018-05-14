@@ -217,10 +217,10 @@
 									Sản phẩm hot :
 								</label>
 								<div class="formRight">
-									<span class="oneFour">
-										<input name="is_hot" id="param_is_hot" value="<?php echo $product->is_hot?>" type="text" /></span>
-									<span name="is_hot_autocheck" class="autocheck"></span>
-									<div name="is_hot_error" class="clear error"></div>
+									<select name="is_hot" id="param_is_hot" _autocheck="true">
+										<option value="1" <?php echo  ($product->is_hot == 1) ? 'selected' : ''?>>Có</option>
+                                		<option value="0" <?php echo  ($product->is_hot == 0) ? 'selected' : ''?>>Không</option>
+									</select>
 								</div>
 								<div class="clear"></div>
 							</div>
@@ -230,25 +230,10 @@
 									Tình trạng còn hàng :
 								</label>
 								<div class="formRight">
-									<span class="oneFour">
-										<input name="status" id="param_status" value="<?php echo $product->status?>" type="text" />
-									</span>
-									<span name="status_autocheck" class="autocheck"></span>
-									<div name="status_error" class="clear error"></div>
-								</div>
-								<div class="clear"></div>
-							</div>
-
-							<div class="formRow">
-								<label class="formLeft" for="param_active">
-									Trạng thái :
-								</label>
-								<div class="formRight">
-									<span class="oneFour">
-										<input name="active" id="param_active" value="<?php echo $product->active?>" type="text" />
-									</span>
-									<span name="active_autocheck" class="autocheck"></span>
-									<div name="active_error" class="clear error"></div>
+									<select name="status" id="param_status" _autocheck="true">
+										<option value="1" <?php echo  ($product->status == 1) ? 'selected' : ''?>>Còn hàng</option>
+                                		<option value="0" <?php echo  ($product->status == 0) ? 'selected' : ''?>>Hết hàng</option>
+									</select>
 								</div>
 								<div class="clear"></div>
 							</div>

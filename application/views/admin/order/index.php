@@ -32,6 +32,7 @@
 								<td class="item" style="width:155px;">
 									<input name="name" value="<?php if(isset($filter_iname)) echo $filter_iname ?>" id="filter_iname" type="text" style="width:155px;">
 								</td>
+								
 							</tr>
 							<tr>
 								<td class="label" style="width:100px;">
@@ -50,7 +51,19 @@
 								<input type="submit" class="button blueB" value="Lọc">
 								<input type="reset" class="basic" value="Reset" onclick="window.location.href = '<?php echo admin_url('order') ?>'; ">
 								</td>
-								
+							</tr>
+							<tr>
+								<td class="label" style="width:100px;">
+									<label for="filter_id">Trạng thái đơn hàng</label>
+								</td>
+								<td style="width:150px">
+									<select name="status">
+										<option value="">Tất cả</option>
+										<option value="0" <?php echo (isset($filter_status) && $filter_status == 0) ? 'selected' : '' ?> style='color: blue'>Chờ xử lý</option>
+										<option value="1" <?php echo (isset($filter_status) && $filter_status == 1) ? 'selected' : '' ?> style='color: gray'>Đang vận chuyển</option>
+										<option value="2" <?php echo (isset($filter_status) && $filter_status == 2) ? 'selected' : '' ?> style='color: green'>Hoàn thành</option>
+									</select>
+								</td>
 							</tr>
 						</tbody>
 					</table>
@@ -141,9 +154,9 @@
 						elseif ($row->status == 2) {
 							echo "<p style='color: green'>Hoàn thành</p>";
 						}
-						elseif ($row->status == 3){
-							echo "<p style='color: red'>Hủy đơn hàng</p>";
-						}
+						// elseif ($row->status == 3){
+						// 	echo "<p style='color: red'>Hủy đơn hàng</p>";
+						// }
 						?>
 					</td>
 

@@ -18,7 +18,6 @@
 					<td>Tên website</td>
 					<td>Địa chỉ</td>
 					<td>Số điện thoại hotline</td>
-					<td>Đường dẫn địa chỉ</td>
 					<td>Mô tả</td>
 					<td>Facebook</td>
 					<td>Youtube</td>
@@ -56,14 +55,6 @@
 					<td>
 						<span title="<?php echo $row->hotline ?>" class="tipS">
 							<?php echo $row->hotline ?>
-						</span>
-					</td>
-
-					<td>
-						<span title="" class="tipS">
-							<textarea rows="6" disabled>
-								<?php echo $row->place_link ?>
-							</textarea>
 						</span>
 					</td>
 					

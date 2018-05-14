@@ -135,7 +135,7 @@
 					<td class="textC"><?php echo $row->created ?></td>
 					
 					<td class="option textC">
-						<a href="product/view/9.html" target="_blank" class="tipS" title="Xem chi tiết sản phẩm">
+						<a href="<?php echo base_url('product/view/'.$row->id) ?>" target="_blank" class="tipS" title="Xem chi tiết sản phẩm">
 							<img src="<?php echo public_url('admin/images')?>/icons/color/view.png">
 			 			</a>
 						 <a href="<?php echo admin_url('product/edit/'.$row->id) ?>" title="Chỉnh sửa" class="tipS">
