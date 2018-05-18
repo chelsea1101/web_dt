@@ -110,6 +110,9 @@ Class Product extends MY_Controller
 			$this->form_validation->set_rules('name', 'Tên', 'required');
 			$this->form_validation->set_rules('catalog', 'Thể loại', 'required');
 			$this->form_validation->set_rules('price', 'Giá', 'required');
+			$this->form_validation->set_rules('warranty', 'Bảo hành', 'required');
+			$this->form_validation->set_rules('specs', 'Thông số', 'required');
+			$this->form_validation->set_rules('descript', 'Giới thiệu sản phẩm', 'required');
 
 			if($this->form_validation->run())
 			{
@@ -215,6 +218,9 @@ Class Product extends MY_Controller
 			$this->form_validation->set_rules('name', 'Tên', 'required');
 			$this->form_validation->set_rules('catalog', 'Thể loại', 'required');
 			$this->form_validation->set_rules('price', 'Giá', 'required');
+			$this->form_validation->set_rules('warranty', 'Bảo hành', 'required');
+			$this->form_validation->set_rules('specs', 'Thông số', 'required');
+			$this->form_validation->set_rules('descript', 'Giới thiệu sản phẩm', 'required');
 
 			if($this->form_validation->run())
 			{
@@ -327,6 +333,15 @@ Class Product extends MY_Controller
 		if($slide)
 		{
 			$this->session->set_flashdata('message', 'Sản phẩm '.$product->name.' này có chứa ảnh bìa, cần xóa ảnh bìa trước khi xóa sản phẩm');
+			redirect(admin_url('product'));
+		}
+
+		//ktra sp co cthd ko
+		$this->load->model('order_detail_model');
+		$order_detail = $this->order_detail_model->get_info_rule(array('product_id' => $id), 'id');
+		if($order_detail)
+		{
+			$this->session->set_flashdata('message', 'Sản phẩm '.$product->name.' này có chứa trong chi tiết đơn hàng, cần xóa trong chi tiết đơn hàng trước khi xóa sản phẩm');
 			redirect(admin_url('product'));
 		}
 

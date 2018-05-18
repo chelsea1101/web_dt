@@ -105,7 +105,7 @@
 						<div class="clear"></div>
 					</div>
 					
-					<a href="product/view/9.html" class="tipS" title="" target="_blank">
+					<a href="<?php echo base_url('product/view/'.$row->id) ?>" class="tipS" title="" target="_blank">
 						<b><?php echo $row->name ?></b>
 					</a>
 					

@@ -158,7 +158,7 @@ Class Product extends MY_Controller
 		}
 		$config['base_url'] = base_url('product/catalog/'.$id); 
 		// $config['first_url'] = $config['base_url'] . $config['suffix'];
-		$config['per_page'] = 2; //slg hien thi tren 1 trang
+		$config['per_page'] = 8; //slg hien thi tren 1 trang
 		$config['uri_segment'] = 4; //pahn doan hien thi so trang tren url
 
 

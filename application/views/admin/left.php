@@ -1,7 +1,10 @@
 <div id="leftSide" style="padding-top:30px;">
 	<div class="sideProfile">
-		<a href="#" title="" class="profileFace"><img width="40" src="<?php echo public_url('admin') ?>/images/user.png" /></a>
-		<span>Xin chào: <strong>Admin!</strong></span>
+		<!-- <a href="#" title="" class="profileFace"><img width="40" src="<?php echo public_url('admin') ?>/images/user.png" /></a> -->
+		<!-- <span>Xin chào: <strong>Admin!</strong></span> -->
+		<center>
+			<a class="navbar-brand" href="<?php echo admin_url() ?>" style="color: #ffc26b; text-shadow:2px 2px  2px gray; font-size: 28px">8Mobile</a>
+		</center>
 		<div class="clear"></div>
 	</div>
 	<div class="sidebarSep"></div>		    
@@ -11,7 +14,7 @@
 
 		<li class="home">
 	
-		<a href="<?php echo admin_url() ?>" class="active" id="current">
+		<a href="<?php echo admin_url() ?>" id="current">
 			<span>Bảng điều khiển</span>
 			<strong></strong>
 		</a>

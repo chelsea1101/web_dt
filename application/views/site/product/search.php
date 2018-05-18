@@ -1,18 +1,18 @@
 <div class="promo">
     <div class="container">
-        <div class="col-xs-12 col-sm-6 col-md-3 box_promo" style="background-color:#e67e22">
+        <div class="col-xs-6 col-sm-6 col-md-3 box_promo" style="background-color:#e67e22">
             <span class="glyphicon glyphicon-refresh" aria-hidden="true"></span>
             <h4>30 NGÀY ĐỔI TRẢ</h4>
         </div>
-        <div class="col-xs-12 col-sm-6 col-md-3 box_promo" style="background-color:#d35400">
+        <div class="col-xs-6 col-sm-6 col-md-3 box_promo" style="background-color:#d35400">
             <span class="glyphicon glyphicon-plane" aria-hidden="true"></span>
             <h4>MIỄN PHÍ VẬN CHUYỂN</h4>
         </div>
-        <div class="col-xs-12 col-sm-6 col-md-3 box_promo" style="background-color:#e74c3c">
+        <div class="col-xs-6 col-sm-6 col-md-3 box_promo" style="background-color:#e74c3c">
             <span class="glyphicon glyphicon-lock" aria-hidden="true"></span>
             <h4>THANH TOÁN AN TOÀN</h4>
         </div>
-        <div class="col-xs-12 col-sm-6 col-md-3 box_promo" style="background-color:#c0392b">
+        <div class="col-xs-6 col-sm-6 col-md-3 box_promo" style="background-color:#c0392b">
             <span class="glyphicon glyphicon-gift" aria-hidden="true"></span>
             <h4>QUÀ TẶNG HẤP DẪN</h4>
         </div>

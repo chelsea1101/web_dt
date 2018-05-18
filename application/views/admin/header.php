@@ -1,8 +1,8 @@
 <div class="topNav">
 	<div class="wrapper">
-		<div class="welcome">
+		<!-- <div class="welcome">
 			<span>Xin chào: <b>Admin!</b></span>
-		</div>
+		</div> -->
 		
 		<div class="userNav">
 			<ul>

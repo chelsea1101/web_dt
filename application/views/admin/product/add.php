@@ -25,10 +25,10 @@
 								<label class="formLeft" for="param_name">Tên:<span class="req">*</span></label>
 								<div class="formRight">
 									<span class="oneTwo">
-										<input name="name" id="param_name" _autocheck="true" type="text" />
+										<input name="name" id="param_name" _autocheck="true" type="text" value="<?php echo set_value('name')?>"/>
 									</span>
 									<span name="name_autocheck" class="autocheck"></span>
-									<div name="name_error" class="clear error"></div>
+									<div name="name_error" class="clear error"><?php echo form_error('name') ?></div>
 								</div>
 								<div class="clear"></div>
 							</div>
@@ -56,7 +56,7 @@
 								            ?>
 									</select>
 									<span name="cat_autocheck" class="autocheck"></span>
-									<div name="cat_error" class="clear error"></div>
+									<div name="cat_error" class="clear error"><?php echo form_error('catalog') ?></div>
 								</div>
 								<div class="clear"></div>
 							</div>
@@ -65,9 +65,9 @@
 								<label class="formLeft">Hình ảnh:<span class="req">*</span></label>
 								<div class="formRight">
 									<div class="left">
-										<input type="file"  id="image" name="image"  >
+										<input type="file"  id="image" name="image" >
 									</div>
-									<div name="image_error" class="clear error"></div>
+									<div name="image_error" class="clear error"><?php echo form_error('image') ?></div>
 								</div>
 								<div class="clear"></div>
 							</div>
@@ -78,7 +78,7 @@
 									<div class="left">
 										<input type="file"  id="image_list" name="image_list[]" multiple>
 									</div>
-									<div name="image_list_error" class="clear error"></div>
+									<div name="image_list_error" class="clear error"><?php echo form_error('image_list') ?></div>
 								</div>
 								<div class="clear"></div>
 							</div>
@@ -89,7 +89,7 @@
 									<div class="left">
 										<input type="file"  id="image_features" name="image_features[]" multiple>
 									</div>
-									<div name="image_features_error" class="clear error"></div>
+									<div name="image_features_error" class="clear error"><?php echo form_error('image_features') ?></div>
 								</div>
 								<div class="clear"></div>
 							</div>
@@ -102,11 +102,11 @@
 								</label>
 								<div class="formRight">
 									<span class="oneTwo">
-										<input name="price"  style='width:100px' id="param_price" class="format_number" _autocheck="true" type="text" />
+										<input name="price"  style='width:100px' id="param_price" class="format_number" _autocheck="true" type="text" value="<?php echo set_value('price')?>" />
 										<img class='tipS' title='Giá bán sử dụng để giao dịch' style='margin-bottom:-8px'  src='<?php echo public_url('admin/crown')?>/images/icons/notifications/information.png'/>
 									</span>
 									<span name="price_autocheck" class="autocheck"></span>
-									<div name="price_error" class="clear error"></div>
+									<div name="price_error" class="clear error"><?php echo form_error('price') ?></div>
 								</div>
 								<div class="clear"></div>
 							</div>
@@ -146,9 +146,9 @@
 									Bảo hành :
 								</label>
 								<div class="formRight">
-									<span class="oneFour"><input name="warranty" id="param_warranty"  type="text" /></span>
+									<span class="oneFour"><input name="warranty" id="param_warranty"  type="text" value="<?php echo set_value('warranty')?>" /></span>
 									<span name="warranty_autocheck" class="autocheck"></span>
-									<div name="warranty_error" class="clear error"></div>
+									<div name="warranty_error" class="clear error"><?php echo form_error('warranty') ?></div>
 								</div>
 								<div class="clear"></div>
 							</div>
@@ -171,8 +171,8 @@
 							<div class="formRow">
 								<label class="formLeft">Thông số kĩ thuật:</label>
 								<div class="formRight">
-									<textarea name="specs" id="param_specs" class="editor"></textarea>
-									<div name="specs_error" class="clear error"></div>
+									<textarea name="specs" id="param_specs" class="editor"><?php echo set_value('specs')?></textarea>
+									<div name="specs_error" class="clear error"><?php echo form_error('specs') ?></div>
 								</div>
 								<div class="clear"></div>
 							</div>
@@ -180,8 +180,8 @@
 				    		<div class="formRow">
 								<label class="formLeft">Giới thiệu sản phẩm:</label>
 								<div class="formRight">
-									<textarea name="descript" id="param_descript" class="editor"></textarea>
-									<div name="descript_error" class="clear error"></div>
+									<textarea name="descript" id="param_descript" class="editor"><?php echo set_value('descript')?></textarea>
+									<div name="descript_error" class="clear error"><?php echo form_error('descript') ?></div>
 								</div>
 								<div class="clear"></div>
 							</div>

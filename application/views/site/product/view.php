@@ -73,7 +73,7 @@
                                 <button type="button" class="close" data-dismiss="modal">&times;</button>
                                 <h4 class="modal-title">Thông số kỹ thuật</h4>
                             </div>
-                            <div class="modal-body">
+                            <div class="modal-body" style="overflow: auto">
                                 <p><?php echo $product->specs ?></p>
                             </div>
                             <div class="modal-footer">
@@ -151,7 +151,7 @@
                 <hr>
                 <h3>Giới thiệu sản phẩm</h3>
                 <div class="panel panel-default">
-                    <div class="panel-body">
+                    <div class="panel-body" style="font-weight: normal;">
                         <?php echo $product->descript ?>
                     </div>
                 </div>

@@ -214,7 +214,12 @@ Class Order extends MY_Controller
 			redirect(admin_url('order'));
 		}
 		$this->order_model->delete($id);
-
+		$input = array();
+		$input['where'] = array('order_id' => $id);
+		$orders_detail = $this->order_detail_model->get_list($input);
+		foreach ($orders_detail as $order_detail) {
+			$this->order_detail_model->delete($order_detail->id);
+		}
 	}
 }
 ?>
