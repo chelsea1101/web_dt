@@ -51,7 +51,7 @@ Class Product extends MY_Controller
 			redirect();
 		}
 		$this->data['catalog'] = $catalog;
-
+		$this->data['id'] = $id;
 		
 
 
@@ -75,8 +75,6 @@ Class Product extends MY_Controller
 				}
 				$this->db->where_in('catalog_id', $catalog_subs_id);
 
-				// $input = array();
-				// $input['where'] = array('price >=' => $price_from, 'price <=' => $price_to);
 			}
 			else
 			{
@@ -86,6 +84,12 @@ Class Product extends MY_Controller
 		}
 		else
 		{
+			$input_catalog = array();
+			$input_catalog['where'] = array('parent_id' => $catalog->parent_id);
+			$input_catalog['order'] = array('id','ASC');
+			$catalog_subs = $this->catalog_model->get_list($input_catalog);
+			$this->data['catalog_subs'] = $catalog_subs;
+
 			$input['where'] = array('catalog_id' => $id);
 		}
 
@@ -109,22 +113,22 @@ Class Product extends MY_Controller
 			{
 				if(($price_from >=0) && ($price_to >=0) && ($price_from <= $price_to))
 				{
-					$input['where'] = array('price >=' => $price_from, 'price <=' => $price_to);
+					$input['where'] = array('(price - (discount * price)/100) >=' => $price_from, '(price - (discount * price)/100) <=' => $price_to);
 				}
 				if(($price_from >=0) && ($price_to ==0) && ($price_from >= $price_to))
 				{
-					$input['where'] = array('price >=' => $price_from);
+					$input['where'] = array('(price - (discount * price)/100) >=' => $price_from);
 				}
 			}
 			else
 			{
 				if(($price_from >=0) && ($price_to >=0) && ($price_from <= $price_to))
 				{
-					$input['where'] = array('price >=' => $price_from, 'price <=' => $price_to, 'catalog_id' => $manufacturer);
+					$input['where'] = array('(price - (discount * price)/100) >=' => $price_from, '(price - (discount * price)/100) <=' => $price_to, 'catalog_id' => $manufacturer);
 				}
 				if(($price_from >=0) && ($price_to ==0) && ($price_from >= $price_to))
 				{
-					$input['where'] = array('price >=' => $price_from, 'catalog_id' => $manufacturer);
+					$input['where'] = array('(price - (discount * price)/100) >=' => $price_from, 'catalog_id' => $manufacturer);
 				}
 			}
 			if($order == 1)

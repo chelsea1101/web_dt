@@ -27,9 +27,15 @@
     <div class="list_product">
         <div class="container">
             <hr>
-            <div class="title">
-                <a class="btn btn-danger" href="">(<?php echo $total_rows ?> sản phẩm)</a>
-            </div>
+            <?php if (empty($list)){ ?>
+                <div class="title">
+                    <a class="btn btn-danger" href="">Không có kết quả tìm kiếm</a>
+                </div>
+            <?php }else {?>
+                <div class="title">
+                    <a class="btn btn-danger" href=""><?php echo $catalog->name ?> (<?php echo $total_rows ?> sản phẩm)</a>
+                </div>
+            <?php } ?>
             <?php foreach ($list as $row) {?>
                 <div class="col-xs-6 col-sm-6 col-md-3 box_product">
                     <a href="<?php echo base_url('product/view/'.$row->id) ?>" class="thumbnail"><img src="<?php echo base_url('/upload/product/'.$row->image) ?>" alt="<?php echo $row->name ?>"></a>

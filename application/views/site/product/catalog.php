@@ -63,8 +63,11 @@
                                 <label for="manufacturer">Hãng</label>
                                 <select class="form-control" id="manufacturer" name="manufacturer">
                                     <option ></option>
+
                                     <?php foreach ($catalog_subs as $sub) {?>
-                                        <option <?php if(isset($manufacturer)) {echo ($manufacturer == $sub->id) ? 'selected' : '' ;}?> value="<?php echo $sub->id ?>"><?php echo $sub->name ?></option>
+                                        <option <?php if(isset($manufacturer)) {echo ($manufacturer == $sub->id) ? 'selected' : '' ;}
+                                            elseif(isset($id)) {echo ($id == $sub->id) ? 'selected' : '' ;}
+                                        ?> value="<?php echo $sub->id ?>"><?php echo $sub->name ?></option>
                                     <?php } ?>
                                 </select>
                             </div>
