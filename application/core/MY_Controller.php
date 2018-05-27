@@ -34,7 +34,7 @@ Class MY_Controller extends CI_Controller
 
 				$this->load->model('catalog_model');
 				$input = array();
-				$input['order'] = array('id','ASC');
+				$input['order'] = array('position','ASC');
 				$input['where'] = array('parent_id' => 0);
 				$list_parent = $this->catalog_model->get_list($input);
 				$this->data['list_parent'] = $list_parent;

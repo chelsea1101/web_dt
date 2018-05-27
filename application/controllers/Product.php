@@ -63,7 +63,7 @@ Class Product extends MY_Controller
 		{
 			$input_catalog = array();
 			$input_catalog['where'] = array('parent_id' => $id);
-			$input_catalog['order'] = array('id','ASC');
+			$input_catalog['order'] = array('position','ASC');
 			$catalog_subs = $this->catalog_model->get_list($input_catalog);
 			$this->data['catalog_subs'] = $catalog_subs;
 			// pre($catalog_subs);
@@ -132,9 +132,9 @@ Class Product extends MY_Controller
 				}
 			}
 			if($order == 1)
-				$input['order'] = array('price','ASC');
+				$input['order'] = array('(price - (discount * price)/100)','ASC');
 			else
-				$input['order'] = array('price','DESC');
+				$input['order'] = array('(price - (discount * price)/100)','DESC');
 
 			// $curent_url = (isset($_SERVER['HTTPS']) ? "https" : "http") . "://$_SERVER[HTTP_HOST]$_SERVER[REQUEST_URI]";
 			// $path = parse_url($curent_url)['query'];
@@ -145,7 +145,7 @@ Class Product extends MY_Controller
 
 		if(!isset($order))
 		{
-			$input['order'] = array('price','ASC');
+			$input['order'] = array('(price - (discount * price)/100)','ASC');
 		}
 		$total_rows = $this->product_model->get_total($input); 
 		$this->data['total_rows'] = $total_rows;

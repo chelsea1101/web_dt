@@ -33,7 +33,7 @@
                 </div>
             <?php }else {?>
                 <div class="title">
-                    <a class="btn btn-danger" href=""><?php echo $catalog->name ?> (<?php echo $total_rows ?> sản phẩm)</a>
+                    <a class="btn btn-danger" href=""><?php echo $total_rows ?> sản phẩm</a>
                 </div>
             <?php } ?>
             <?php foreach ($list as $row) {?>
