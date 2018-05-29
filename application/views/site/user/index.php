@@ -50,10 +50,65 @@
                 </form>
             </div>
         </div>
-<!--         <div class="col-xs-12 col-sm-12 col-md-12">
+        <!-- <div class="col-xs-12 col-sm-12 col-md-12">
             <h1>Các đơn hàng đã mua</h1>
             <hr>
-
+            <div class="table-responsive">
+                <?php foreach ($orders as $row_orders) { ?>
+                <table class="table" style="font-size: 16px;">
+                    <thead>
+                        <tr class="danger">
+                            <th>Mã đơn hàng:</th>
+                            <th><?php echo $row_orders->id ?></th>
+                            <th></th>
+                            <th>Tình trạng:</th>
+                            <th>
+                                <?php 
+                                if($row_orders->status == 0){
+                                    echo "Chờ xử lý";
+                                }
+                                elseif ($row_orders->status == 1) {
+                                    echo "Đang vận chuyển";
+                                }
+                                elseif ($row_orders->status == 2) {
+                                    echo "Hoàn thành";
+                                }?>
+                                    
+                            </th>
+                        </tr>
+                        <tr>
+                            <th width="10%"></th>
+                            <th width="30%">Sản phẩm</th>
+                            <th width="15%">Đơn giá</th>
+                            <th width="10%">Số lượng</th>
+                            <th width="15%">Thành tiền</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <?php foreach ($orders_detail as $row_orders_detail) { 
+                                foreach ($products as $row_product) {?>
+                        <tr>
+                            <td width="10%"><img src="<?php echo base_url('/upload/product/'.$row_product->image) ?>" alt="<?php echo $row_product->name ?>" width = 100px></td>
+                            <td width="30%"><a href=""><?php echo $row_product->name ?></a></td>
+                            <td width="15%"><?php echo number_format($row_product->price - ($row_product->price * ($row_product->discount / 100)))?> đ</td>
+                            <td width="10%"><?php echo $row_orders_detail->quantity ?></td>
+                            <td width="15%"><?php echo number_format($row_orders_detail->total)?> đ</td>
+                        </tr>
+                        <?php } ?>
+                        <?php } ?>
+                    </tbody>
+                    <tbody>
+                        <tr class="danger">
+                            <td width="10%"></td>
+                            <td width="30%"></td>
+                            <td width="15%">Tổng tiền</td>
+                            <td width="10%"></td>
+                            <td width="15%"><?php echo number_format($row_orders->total)?> đ</td>
+                        </tr>
+                    </tbody>
+                </table>
+                <?php } ?>
+            </div>
         </div> -->
     </div>
 </center>

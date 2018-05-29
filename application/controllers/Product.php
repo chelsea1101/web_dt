@@ -86,7 +86,7 @@ Class Product extends MY_Controller
 		{
 			$input_catalog = array();
 			$input_catalog['where'] = array('parent_id' => $catalog->parent_id);
-			$input_catalog['order'] = array('id','ASC');
+			$input_catalog['order'] = array('position','ASC');
 			$catalog_subs = $this->catalog_model->get_list($input_catalog);
 			$this->data['catalog_subs'] = $catalog_subs;
 
@@ -111,31 +111,60 @@ Class Product extends MY_Controller
 
 			if(empty($manufacturer))
 			{
-				if(($price_from >=0) && ($price_to >=0) && ($price_from <= $price_to))
+				if(($price_from >=0) && ($price_to >=0) && ($price_from < $price_to))
 				{
 					$input['where'] = array('(price - (discount * price)/100) >=' => $price_from, '(price - (discount * price)/100) <=' => $price_to);
 				}
-				if(($price_from >=0) && ($price_to ==0) && ($price_from >= $price_to))
+				if(($price_from >=0) && ($price_to ==0) && ($price_from > $price_to))
 				{
 					$input['where'] = array('(price - (discount * price)/100) >=' => $price_from);
+				}
+				if(($price_from >=0) && ($price_to >=0) && ($price_from == $price_to))
+				{
+					$input['where'] = array('(price - (discount * price)/100) =' => $price_from);
+				}
+				if(($price_from >0) && ($price_to !=0) && ($price_from > $price_to))
+				{
+					$input['where'] = array('(price - (discount * price)/100) >' => 1000000000000000);
+				}
+				if(($price_from == 0) && ($price_to ==0))
+				{
+					$input['where'] = array();
 				}
 			}
 			else
 			{
-				if(($price_from >=0) && ($price_to >=0) && ($price_from <= $price_to))
+				if(($price_from >=0) && ($price_to >=0) && ($price_from < $price_to))
 				{
 					$input['where'] = array('(price - (discount * price)/100) >=' => $price_from, '(price - (discount * price)/100) <=' => $price_to, 'catalog_id' => $manufacturer);
 				}
-				if(($price_from >=0) && ($price_to ==0) && ($price_from >= $price_to))
+				if(($price_from >=0) && ($price_to ==0) && ($price_from > $price_to))
 				{
 					$input['where'] = array('(price - (discount * price)/100) >=' => $price_from, 'catalog_id' => $manufacturer);
+				}
+				if(($price_from >=0) && ($price_to >=0) && ($price_from == $price_to))
+				{
+					$input['where'] = array('(price - (discount * price)/100) =' => $price_from, 'catalog_id' => $manufacturer);
+				}
+				if(($price_from >0) && ($price_to !=0) && ($price_from > $price_to))
+				{
+					$input['where'] = array('(price - (discount * price)/100) >' => 1000000000000000, 'catalog_id' => $manufacturer);
+				}
+				if(($price_from == 0) && ($price_to ==0))
+				{
+					$input['where'] = array('catalog_id' => $manufacturer);
 				}
 			}
 			if($order == 1)
 				$input['order'] = array('(price - (discount * price)/100)','ASC');
-			else
+			elseif($order == 2)
 				$input['order'] = array('(price - (discount * price)/100)','DESC');
-
+			elseif($order == 3)
+				$input['order'] = array('buyed','DESC');
+			elseif($order == 4)
+				$input['where'] = array('is_hot' => 1);
+			elseif($order == 5)
+				$input['where'] = array('discount >' => 0);
 			// $curent_url = (isset($_SERVER['HTTPS']) ? "https" : "http") . "://$_SERVER[HTTP_HOST]$_SERVER[REQUEST_URI]";
 			// $path = parse_url($curent_url)['query'];
 			// pre(parse_url($curent_url)['path']);

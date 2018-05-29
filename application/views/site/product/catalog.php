@@ -76,6 +76,9 @@
                                 <select class="form-control" id="order" name="order">
                                     <option <?php if(isset($order)) {echo ($order == 1) ? 'selected' : '' ;}?> value="1">Giá từ thấp đến cao</option>
                                     <option <?php if(isset($order)) {echo ($order == 2) ? 'selected' : '' ;}?> value="2">Giá từ cao đến thấp</option>
+                                    <option <?php if(isset($order)) {echo ($order == 3) ? 'selected' : '' ;}?> value="3">Mua nhiều</option>
+                                    <option <?php if(isset($order)) {echo ($order == 4) ? 'selected' : '' ;}?> value="4">Nổi bật</option>
+                                    <option <?php if(isset($order)) {echo ($order == 5) ? 'selected' : '' ;}?> value="5">Giảm giá</option>
                                 </select>
                             </div>
                             <button type="submit" class="btn btn-warning">Lọc</button>
@@ -84,9 +87,15 @@
                     </div>
                 </div>
             </center>
-            <div class="title">
-                <a class="btn btn-danger" href=""><?php echo $catalog->name ?> (<?php echo $total_rows ?> sản phẩm)</a>
-            </div>
+            <?php if (empty($list)){ ?>
+                <div class="title">
+                    <a class="btn btn-danger" href="">Không có kết quả tìm kiếm</a>
+                </div>
+            <?php }else {?>
+                <div class="title">
+                    <a class="btn btn-danger" href=""><?php echo $catalog->name ?> (<?php echo $total_rows ?> sản phẩm)</a>
+                </div>
+            <?php } ?>
             <?php foreach ($list as $row) {?>
                 <div class="col-xs-6 col-sm-6 col-md-3 box_product">
                     <a href="<?php echo base_url('product/view/'.$row->id) ?>" class="thumbnail"><img src="<?php echo base_url('/upload/product/'.$row->image) ?>" alt="<?php echo $row->name ?>"></a>

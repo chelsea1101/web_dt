@@ -146,16 +146,29 @@
 			// $input = array();
 			// $input['where'] = array('user_id' => $user_id);
 			// $orders = $this->order_model->get_list($input);
+			// $this->data['orders'] = $orders;
 			// foreach ($orders as $order) {
 			// 	$input = array();
 			// 	$input['where'] = array('order_id' => $order->id);
 			// 	$orders_detail = $this->order_detail_model->get_list($input);
+			// 	$this->data['orders_detail'] = $orders_detail;
 			// 	foreach ($orders_detail as $order_detail) {
+					
+			// 		$orders_detail_id = array();
+			// 		foreach ($orders_detail as $or) {
+			// 			$orders_detail_id[] = $or->product_id;
+			// 		}
+			// 		$this->db->where_in('id', $orders_detail_id);
 			// 		$input = array();
-			// 		$input['where'] = array('id' => $order_detail->product_id);
-			// 		$products = $this->product_model->get_list($input);
+			// 		// $input['where'] = array('id' => $order_detail->product_id);
+			// 		$products = $this->product_model->get_list();
+			// 		$this->data['products'] = $products;
 			// 	}
+				
 			// }
+			
+			
+			
 
 			$this->data['temp'] = 'site/user/index';
 			$this->load->view('site/layout', $this->data);
